@@ -581,3 +581,35 @@ em {
     align-items: flex-start;
   }
 }
+/* ===== БЕЙДЖ "ДИПЛОМ С ОТЛИЧИЕМ" ===== */
+
+.honor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+
+  background: linear-gradient(135deg, #ffd36b, #ffb347);
+  color: #1b1b1b;
+
+  box-shadow: 0 10px 24px rgba(255, 211, 107, 0.35);
+  border: 1px solid rgba(255, 211, 107, 0.4);
+
+  letter-spacing: 0.3px;
+}
+
+/* лёгкий hover эффект */
+.honor-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(255, 211, 107, 0.45);
+}
+
+/* компактный вариант (если нужно) */
+.honor-badge.small {
+  font-size: 12px;
+  padding: 6px 12px;
+}
