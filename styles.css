@@ -616,3 +616,83 @@ em {
 .cards-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+/* ===== КАРТИНКИ В КАРТОЧКАХ ===== */
+
+.doc-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: #0b1422;
+  padding: 12px;
+  cursor: zoom-in;
+}
+
+/* для фотографий из спортивной жизни */
+.sport-photo img {
+  object-fit: cover;
+  background: #0b1422;
+  padding: 0;
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 18, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-image {
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  background: white;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+  .doc-card img {
+    height: 240px;
+  }
+
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox-image {
+    max-width: 96vw;
+    max-height: 82vh;
+  }
+}
